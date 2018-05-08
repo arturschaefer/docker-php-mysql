@@ -1,0 +1,30 @@
+version: '3.3'
+volumes:
+  data:
+services:
+  db_php:
+    image: mysql:5.6
+    ports:
+      - "3306:3306"
+    volumes:
+      - data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=app_development
+  php:
+    build: .
+    ports:
+     - "8001:80"
+     - "1443:443"
+    volumes:
+     - ./www:/var/www/html
+    links:
+     - db_php
+  php_my_admin:
+    image: phpmyadmin/phpmyadmin:latest
+    links:
+      - db_php
+    ports:
+      - "8002:80"
+    environment:
+      - PMA_ARBITRARY=1
