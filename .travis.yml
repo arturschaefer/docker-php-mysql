@@ -13,3 +13,6 @@ addons:
 
 script:
   - sonar-scanner
+
+notifications:
+    slack: tcc-estudo-de-caso:loPMzuvXJIY1GezgAroKcGoi
