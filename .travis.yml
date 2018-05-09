@@ -9,7 +9,7 @@ addons:
   sonarcloud:
     organization: "arturschaefer-github" # the key of the org you chose at step #3
     token:
-      secure: 29fab3a6b8222e4262af64d28267ad87915b6f73 # encrypted value of your token
+      secure: 02fa236cab4aeff818c6bdad220c29bfb3146b89 # encrypted value of your token
 
 script:
   - sonar-scanner
