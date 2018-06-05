@@ -1,18 +1,22 @@
+# Versões e linguagem utilizada
 language: php
 php:
   - '5.6'
   - '7.0'
-  - hhvm # on Trusty only
+  - hhvm
   - nightly
 
+# Integração com o Sonarcloud
 addons:
   sonarcloud:
-    organization: "arturschaefer-github" # the key of the org you chose at step #3
+    organization: "arturschaefer-github"
     token:
-      secure: 02fa236cab4aeff818c6bdad220c29bfb3146b89 # encrypted value of your token
+      secure: 02fa236cab4aeff818c6bdad220c29bfb3146b89
 
+# Execução dos testes com o sonar-scanner
 script:
   - sonar-scanner
 
+# Canal de notificações no Slack
 notifications:
     slack: tcc-estudo-de-caso:loPMzuvXJIY1GezgAroKcGoi
