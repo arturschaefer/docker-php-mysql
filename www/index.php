@@ -13,8 +13,11 @@
 
 </head>
 <body>
+  <?php echo "<center><h1>Modelo de página com consulta MySQL</h1>"; ?>
   <div class="container">
-    <?php echo "<h1>Tabela de Pessoas</h1>"; ?>
+
+    <br>
+    <?php echo "<center><h2>Tabela de Pessoas</h2>"; ?>
 
     <?php
     $conn = mysqli_connect("db_php", "root", "root", "app_development");
