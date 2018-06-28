@@ -14,7 +14,7 @@
 </head>
 <body>
   <div class="container">
-    <?php echo "<h1>Pessoas</h1>"; ?>
+    <?php echo "<h1>Tabela de Pessoas</h1>"; ?>
 
     <?php
     $conn = mysqli_connect("db_php", "root", "root", "app_development");
